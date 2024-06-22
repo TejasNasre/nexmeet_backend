@@ -1,0 +1,14 @@
+{
+  "name": "nexmeet_backend",
+  "version": "1.0.0",
+  "description": "event platform for techies",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "event-platform-backend"
+  ],
+  "author": "tejas nasre",
+  "license": "ISC"
+}
