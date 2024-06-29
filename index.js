@@ -23,7 +23,10 @@ connect(process.env.DB_URL)
 
 // Middlewares
 app.use(helmet()); // Set security-related HTTP response headers
-app.use(cors()); // Configure CORS appropriately based on your requirements
+app.use(cors({
+  origin: "*",
+  credentials: true,
+})); // Configure CORS appropriately based on your requirements
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
