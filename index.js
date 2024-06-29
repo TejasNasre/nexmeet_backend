@@ -6,6 +6,7 @@ const rateLimit = require("express-rate-limit");
 const dotenv = require("dotenv").config();
 const { connect } = require("./db/connect");
 const auth = require("./routes/auth");
+const event = require("./routes/event");
 
 if (!process.env.PORT || !process.env.DB_URL) {
   console.error("Critical environment variables are missing.");
@@ -36,6 +37,7 @@ app.use(limiter);
 
 // Routes
 app.use("/auth", auth);
+app.use("/event", event);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
